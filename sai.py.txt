@@ -1,0 +1,27 @@
+length =100000
+def maximum(str, n): 
+    c= [0] * length 
+    for i in range(n): 
+        c[ord(str[i])] += 1
+    max1 = 0
+    for i in range(length): 
+        if (c[i] != 0): 
+            max1 += 1    
+    return max1
+def smallest(str): 
+    n = len(str)    
+    max1= maximum(str, n) 
+    min1 = n    
+    for i in range(n): 
+        for j in range(n): 
+            subs = str[i:j] 
+            sublenght = len(subs) 
+            sub1 = maximum(subs,sublenght)
+            if (sublenght < min1 and max1 == sub1): 
+                min1 = sublenght 
+  
+    return min1 
+if __name__ == "__main__": 
+    str =input()
+    result = smallest(str); 
+    print(result) 
