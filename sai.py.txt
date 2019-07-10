@@ -24,5 +24,11 @@ def smallest(str):
 if __name__ == "__main__": 
     print("only lowercase strings are allowed")
     str =input()
+    a=[]
+    s= " "
+    for i in str:
+       if(i.islower()): 
+           a.append(i)
+           s=s.join(a)
     result = smallest(str); 
     print(result) 
