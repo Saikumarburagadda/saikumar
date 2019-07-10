@@ -1,0 +1,2 @@
+# saikumar
+smallest  substring
