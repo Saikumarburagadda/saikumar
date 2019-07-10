@@ -22,6 +22,7 @@ def smallest(str):
   
     return min1 
 if __name__ == "__main__": 
+    print("only lowercase strings are allowed")
     str =input()
     result = smallest(str); 
     print(result) 
